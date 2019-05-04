@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/**************** 1024 *****************/
+@media all and (max-width: 1169px){
+
+/*------ Global ------*/
+h1 {font: 700 italic 50px/60px Roboto;}
+h2 {font: 700 italic 34px/38px Roboto; margin-bottom: 50px;}
+h3 {font: 700 22px/26px Roboto;}
+
+/*------ Header ------*/
+header .wrapper {padding: 40px 15px;}
+	#top_carousel {height: 450px;}
+		#top_carousel .item {width: 800px; height: 450px;}
+			#top_carousel .item .title {font: 700 20px/26px Roboto; padding: 30px 15px;}
+
+/*------ Features ------*/
+#features .wrapper {padding: 40px 15px;}
+	#features .items {}
+		#features .items [class*="item"] {margin-left: 40px;}
+
+/*------ Examples ------*/
+#examples .wrapper {padding: 0px 0px;}
+
+/*------ Options ------*/
+#options .wrapper {padding: 0px 0px;}
+
+}
+
+/**************** 768 *****************/
+@media all and (max-width: 1023px){
+
+/*------ Global ------*/
+h1 {font: 700 italic 44px/48px Roboto; margin-bottom: 30px;}
+h2 {font: 700 italic 30px/34px Roboto; margin-bottom: 30px;}
+h3 {font: 700 20px/24px Roboto; margin-bottom: 15px;}
+
+/*------ Header ------*/
+header .wrapper {padding: 30px 15px;}
+	#top_carousel {height: 340px;}
+		#top_carousel .item {width: 600px; height: 340px;}
+			#top_carousel .item .title {font: 700 18px/24px Roboto; padding: 20px 10px;}
+
+/*------ Features ------*/
+#features .wrapper {padding: 30px 15px;}
+	#features .items {margin-bottom: -40px;}
+		#features .items [class*="item"] {font: 14px/18px Roboto; margin: 0 0 0 0;}
+			#features .items [class*="item"] strong {margin-bottom: 5px;}
+
+/*------ Examples ------*/
+#examples .wrapper {padding: 0px 0px;}
+	#example-3 {width: 300px;}
+		#example-3 [class*="item"] {width: 200px; height: 200px; font: 700 80px/200px Roboto;}
+
+/*------ Options ------*/
+#options .wrapper {padding: 0px 0px;}
+	#options h3 {margin-top: 30px;}
+	.options_table {}
+		.options_table .th, .options_table .td {font: 14px/18px Roboto; padding: 8px;}
+
+/*------ Footer ------*/
+footer .wrapper {padding: 0px;}
+
+}
+
+/**************** 480 *****************/
+@media all and (max-width: 767px){
+
+/*------ Global ------*/
+html {font: 14px/18px Roboto;}
+
+h1 {font: 700 italic 40px/44px Roboto;}
+h2 {font: 700 italic 26px/30px Roboto; letter-spacing: 0; margin-bottom: 25px;}
+
+.f_arrow {width: 25px; height: 30px;}
+	.f_arrow[class*="prev"] {left: 3px;}
+	.f_arrow[class*="next"] {right: 3px;}
+		.f_arrow:before, .f_arrow:after {width: 25px; height: 4px;}
+			.f_arrow:before {top: 3px;}
+			.f_arrow:after {bottom: 3px;}
+
+/*------ Navigation ------*/
+#navigation {background: none; box-shadow: none;}
+#navigation .wrapper {padding: 15px 10px;}
+	#navigation .menu_item {margin: 0 5px;}
+		#navigation .menu_item > a {padding: 0 15px;}
+
+/*------ Header ------*/
+header .wrapper {padding: 30px 10px;}
+	#top_carousel {height: 220px;}
+		#top_carousel .item {width: 360px; height: 220px;}
+			#top_carousel .item .title {font: 700 16px/22px Roboto; padding: 15px 10px;}
+
+/*------ Features ------*/
+#features .wrapper {padding: 30px 10px;}
+	#features .items {max-width: 600px; text-align: center; margin-bottom: -25px;}
+		#features .items [class*="item"] {width: 45%; margin: 0 10px 25px;}
+
+/*------ Examples ------*/
+#examples .wrapper {padding: 0px 0px;}
+	
+	#example-1 {height: 240px; margin-bottom: 60px;}
+		#example-1 .item {height: 220px;}
+			#example-1 .item .photo {width: 70px; height: 70px; margin-bottom: 10px;}
+			#example-1 .item strong {margin-bottom: 5px;}
+		#example-1 .dots {height: 16px; bottom: -20px;}
+			#example-1 .dot {width: 16px; height: 16px;}
+	
+	#example-2 {height: 350px;}
+		#example-2 .item {width: 150px; height: 300px;}
+	#examples .callbacks_info {height: auto; font: 14px/20px Roboto; padding: 15px 20px;}
+		#examples .callbacks_info .triggers {width: auto; max-width: 270px; font-size: 0; text-align: center; margin: 0 auto 15px; position: static;}
+			#examples .callbacks_info .trigger {display: inline-block; vertical-align: top; width: 120px; height: 40px; font: 14px/36px Roboto;}
+
+/*------ Options ------*/
+#options .wrapper {padding: 30px 10px;}	
+	.options_table {display: block;}
+		.options_table .tr {display: block; margin: 0 auto 15px;}
+			.options_table .th {display: none;}
+			.options_table .td {display: block; background: none !important; border: none; font: 14px/20px Roboto; padding: 0;}
+			.options_table .td:first-child {font-size: 1.05em; font-weight: 700; padding-left: 14px; margin-bottom: 5px; position: relative;}
+				.options_table .td:first-child:before {content:''; display: block; width: 6px; height: 6px; background: #3086a9; border-radius: 50%; position: absolute; left: 0; top: 8px;}
+	.plugin_options {}
+		.plugin_options .td:nth-child(2):before {content:'Type: '; font-weight: 700; font-style: italic;}
+		.plugin_options .td:nth-child(3):before {content:'Default value: '; font-weight: 700; font-style: italic;}
+		.plugin_options .td:last-child {font-style: italic; padding-top: 10px;}
+	.plugin_api {}
+		.plugin_api .td:nth-child(2):before {content:'Description: '; font-weight: 700; font-style: italic;}
+		.plugin_api .td:nth-child(3):before {content:'Example: '; font-weight: 700; font-style: italic;}
+	.note {font: 14px/18px Roboto; padding: 10px;}
+
+/*------ Footer ------*/
+footer {font: 14px/18px Roboto;}
+footer .wrapper {padding: 15px 10px;}
+
+}
+
+/**************** 320 *****************/
+@media all and (max-width: 479px){
+
+/*------ Global ------*/
+h1 {font: 700 italic 36px/40px Roboto;}
+	h1 span {margin-top: 5px;}
+
+/*------ Navigation ------*/
+#navigation {}
+	#navigation .menu {max-width: 300px;}
+	#navigation .menu_item {width: 35%; margin: 5px 10px;}
+		#navigation .menu_item > a {width: 100%;}
+
+/*------ Header ------*/
+header .wrapper {padding: 0px 0px;}
+	#top_carousel {height: 160px;}
+		#top_carousel .item {width: 240px; height: 160px;}
+			#top_carousel .item .title {font: 700 14px/16px Roboto; padding: 10px 5px;}
+
+/*------ Features ------*/
+#features .wrapper {padding: 0px 0px;}
+	#features .items {max-width: 320px;}
+		#features .items [class*="item"] {display: block; width: 100%; text-align: center; margin: 0 auto 25px;}
+
+/*------ Examples ------*/
+#examples .wrapper {padding: 0px 0px;}
+	
+	#example-1 {height: 240px;}
+		#example-1 .item {width: 280px; height: 240px;}
+		#example-1 .dots {}
+			#example-1 .dot:after {left: 0;}
+
+}

@@ -1,0 +1,77 @@
+page-notification {
+
+
+
+  .clearfix{
+    clear: both;
+  }
+  ion-content{
+    background-image: url("../../assets/content/img/bg.png")!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .main-notification{
+    width: 100%;
+  }
+  .main-notification .noti-section{
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #ffffff;
+    padding:10px;
+    clear: both;
+    margin-bottom: 10px;
+  }
+  .main-notification .noti-section .noti-left{
+    width: 20%;
+    float: left;
+  }
+  .main-notification .noti-section .noti-left img{
+    width: 100%;
+    padding: 5px;
+    border-radius:100%;
+    border: 2px solid #fff;
+  }
+  .main-notification .noti-section .noti-right{
+    width: 80%;
+    float: left;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right:5px;
+  }
+  .main-notification .noti-section .noti-right .noti-title-name{
+    width: 100%;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    color:#fff;
+  }
+  .main-notification .noti-section .noti-right .noti-body-name{
+    width: 100%;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    color:#fff;
+  }
+  .main-notification .noti-section .noti-right .noti-date{
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .main-notification .noti-section .noti-right .noti-date a{
+    padding-left: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 15px!important;
+    font-size: 12px;
+    background: #fec733;
+    border: 1px solid #fec733;
+    color:#fff;
+    text-decoration: none;
+  }
+  .main-notification .noti-section .noti-right .noti-date a .noti-date-btn{
+    padding-right: 5px;
+  }
+
+}

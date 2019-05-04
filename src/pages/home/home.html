@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar id="styling">
+    <button ion-button menuToggle right>
+      <ion-icon name="menu" color="light"></ion-icon>
+    </button>
+    <ion-title><span>Home</span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content no-padding>
+  <ion-grid no-padding>
+    <ion-row no-padding>
+      <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding>
+        <div style="height: 80vh; position: relative;">
+          <div class="main">
+            <div class="icon-image">
+              <ion-img class="img-ion" src="../../assets/content/img/home-logo.png"></ion-img>
+            </div>
+                <!--<div id="examples" style="padding: 0px!important; margin: 0px!important;">
+                  <div class="wrapper" style="width: 100%; margin: 0 auto; padding: 0px!important;">
+                    <div id="example-1" class="fcarousel" aria-labelledby="example-1-label"></div>
+                    <div id="example-2" class="fcarousel" aria-labelledby="example-2-label"></div>
+                    <div id="example-3" class="fcarousel" aria-labelledby="example-3-label" style="width:100%; padding: 0px!important;">
+                      <div class="item-1">
+                        <ion-img style="background: transparent; border-radius:50%; width: 200px; height: 200px;" src="../../assets/content/img/slide1.jpg"></ion-img>
+                      </div>
+                      <div class="item-2">
+                        <ion-img style="background: transparent; border-radius:50%; width: 200px; height: 200px;" src="../../assets/content/img/slide2.jpg"></ion-img>
+                      </div>
+                      <div class="item-3">
+                        <ion-img style="background: transparent; border-radius:50%; width: 200px; height: 200px;" src="../../assets/content/img/slide3.jpg"></ion-img>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+
+            <div style="width: 100%; height: auto; border-radius:10px; background: rgba(0, 0, 0, 0.6); padding-top: 20px; margin: 0 auto;">
+              <div style="width: 90%; margin: 0 auto;">
+                <ion-slides autoplay="3000" speed="2000" pager loop="true" effect="fade">
+                  <ion-slide *ngFor="let number of [1,2,3,4,5,6,7,8,9,10]">
+                    <div>
+                      <img src="../../assets/content/img/slide/{{number}}.png" style=" border-radius:10px;" alt="">
+                    </div>
+                  </ion-slide>
+                </ion-slides>
+              </div>
+
+              <!--<ion-card style="background: transparent; border:none!important; padding-bottom: 0px;">
+
+              </ion-card>-->
+            </div>
+
+            <div class="awesome-link">
+              <div class="welcome-text">WELCOME TO</div>
+              <div class="welcome-img">
+                <ion-img style="background: transparent; width: 250px; height: 75px;" src="../../assets/content/img/text-logo.png"></ion-img>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

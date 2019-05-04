@@ -1,0 +1,135 @@
+page-suggesion {
+
+  ion-content{
+    background-image: url("../../assets/content/img/bg.png")!important;
+    //background-color: transparent!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .main{
+    width: 100%;
+    position: absolute;
+    //left: 50%;
+    top: 20%;
+    //margin-left: -150px;
+    //margin-top: -150px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .main > .icon-image{
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .main > .icon-image > .img-ion{
+    width: 80px;
+    height: 80px;
+    margin-top: -43px;
+    border-radius:100px!important;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .main-text > p.first{
+    color: #fec733;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+  .main-text > p.sec{
+    color: #fec733;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+
+  .inner-text{
+    //background: whitesmoke;
+    padding: 15px 10px;
+    margin-top: 10px;
+  }
+  #first{
+    //background: red;
+  }
+  .call-icon-div{
+    background: rgba(62, 43, 12, 0.8);
+    padding-top: 12px;
+    border-radius:10px;
+    padding-bottom: 12px;
+    text-align: center;
+    width: 98%;
+    margin: auto;
+    color: #fec733;
+    font-size: 30px;
+  }
+  .mail-icon-div{
+    background: rgba(62, 43, 12, 0.8);
+    padding-top: 12px;
+    border-radius:10px;
+    padding-bottom: 12px;
+    text-align: center;
+    width: 98%;
+    margin: auto;
+    color: #fec733;
+    font-size: 30px;
+  }
+  .msg-icon-div{
+    background: rgba(62, 43, 12, 0.8);
+    padding-top: 12px;
+    border-radius:10px;
+    padding-bottom: 12px;
+    text-align: center;
+    width: 98%;
+    margin: auto;
+    color: #fec733;
+    font-size: 35px;
+  }
+  #second{
+    //background: purple;
+  }
+  #third{
+    //background: orange;
+  }
+  .awesome-link{
+    text-align: center;
+    margin: 0px;
+    padding: 15px 0px;
+  }
+  .awesome-link > a{
+    color: #fec733;
+    font-size: 20px;
+    margin: 0px;
+  }
+  .awesome-btn{
+    text-align: center;
+    margin: 0px;
+    padding: 15px 0px;
+  }
+  .btn-awe{
+    background-color: #fec733!important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f7fe33;
+    color: #000000;
+    font-weight: bold;
+  }
+  .ion-md-call, .ion-md-mail, .ion-md-text{
+    color: #fec733!important;
+    font-size: 40px!important;
+    margin-bottom: 5px!important;
+  }
+  .icons-text{
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+
+
+
+
+}

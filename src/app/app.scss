@@ -1,0 +1,183 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+ion-content{
+  background: rgba(0,0,0,0.9)!important;
+  padding: 0!important;
+  margin: 0!important;
+}
+ion-content .content-ios{
+  //background: purple!important;
+  padding: 0!important;
+  margin: 0!important;
+}
+.content-ios {
+  color: #fff!important;
+  background-color: transparent!important;
+}
+
+.item-md.item-block .item-inner {
+  padding-right: 8px;
+  border-bottom: 1px solid #dedede;
+  background: rgba(0,0,0,0.9)!important;
+}
+.list-md {
+  margin: 0!important;
+  background: transparent!important;
+}
+.list-ios {
+  margin: 0!important;
+  background: transparent!important;
+}
+.item-md {
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  border-left: 2px solid #dedede;
+  border-right: 1px solid #dedede;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-md:nth-child(1){
+  border-top: 5px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.item-md:nth-child(14){
+  border-bottom: 2px solid #dedede;
+}
+.item-inner{
+  background: transparent;
+}
+.list-md .item-block .item-inner {
+  border-bottom: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.input-wrapper{
+  background: rgba(0,0,0,0.9);
+  padding-left: 15px;
+  color: #ffffff;
+  //border-right: 1px solid goldenrod;
+  //border-left: 1px solid goldenrod;
+}
+
+
+
+//ios navbar settings
+.item-ios .item-block .item-inner {
+  padding-right: 0!important;
+  border-bottom: 1px solid #dedede;
+  background: rgba(0,0,0,0.9)!important;
+}
+.list-ios .item-block .item-inner {
+  border-bottom: none;
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+.list-ios {
+  margin: 0!important;
+  background: transparent!important;
+}
+.item-ios {
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #fff!important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-ios:nth-child(1){
+  border-top: 5px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.item-ios:nth-child(14){
+  border-bottom: 2px solid #dedede;
+}
+.item-inner{
+  background: transparent;
+}
+.list-ios .item-block .item-inner {
+  border-bottom: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.input-wrapper{
+  background: rgba(0,0,0,0.9);
+  padding-left: 15px;
+  color: #ffffff;
+  //border-right: 1px solid goldenrod;
+  //border-left: 1px solid goldenrod;
+}
+.disable-hover .bar-buttons .bar-buttons-ios .bar-button .bar-button-ios .bar-button-default .bar-button-default-ios .bar-button-menutoggle .bar-button-menutoggle-ios{
+  float: left!important;
+  text-align: left!important;
+}
+ion-navbar .toolbar .toolbar-ios .statusbar-padding .menutoggle{
+  float: left!important;
+  text-align: left!important;
+}
+
+.header .title{
+  color: #ffffff !important;
+  text-align: center!important;
+}
+.header .title span{
+  color: #ffffff !important;
+  text-align: center!important;
+  letter-spacing: 5px;
+  font-family: Lato;
+  font-size: 25px;
+  font-weight: bold;
+}
+.toolbar-background{
+  background: rgba(0, 0, 0, 0.6)!important;
+}
+.menutoggle{
+  color: #ffffff!important;
+}
+.toolbar-title-md{
+  color: #ffffff!important;
+}
+.toolbar-title-ios{
+  color: #ffffff!important;
+}
+.header .header-ios{
+  background: transparent!important;
+}
+.toolbar-ios{
+  background: transparent!important;
+  //background: greenyellow;
+}
+

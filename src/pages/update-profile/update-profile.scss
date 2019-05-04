@@ -1,0 +1,228 @@
+page-update-profile {
+
+  ion-content{
+    background-image: url("../../assets/content/img/bg.png")!important;
+    //background-color: transparent!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .top-user-pic-update{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .top-user-pic-update img{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .username-update{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .user-detail-update{
+    width:100%;
+  }
+  .user-detail-update .email-update{
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    //background: red;
+  }
+  .user-detail-update .email-update .email-icon-update{
+    display: inline;
+    float: left;
+    color: #fec733;
+    text-align: center;
+    width: 12%;
+  }
+  .user-detail-update .email-update .email-icon-update .em-icon-update{
+    color: #fec733;
+    font-size: 20px;
+    text-align: center;
+  }
+  .user-detail-update .email-update .email-heading-update{
+    display: inline;
+    color: #ffffff;
+    width: 25%;
+    padding-top: 15px;
+    float: left;
+    font-size: 14px;
+  }
+  .user-detail-update .email-update .email-address-update{
+    display: inline;
+    color: #ffffff;
+    padding-top: 2px;
+    width: 55%;
+    float: right;
+    font-size: 14px;
+  }
+
+
+  .user-detail-update .phone-update{
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    //background: red;
+  }
+  .user-detail-update .phone-update .phone-icon-update{
+    display: inline;
+    float: left;
+    color: #fec733;
+    text-align: center;
+    width: 12%;
+  }
+  .user-detail-update .phone-update .phone-icon-update .ph-icon-update{
+    color: #fec733;
+    font-size: 20px;
+    text-align: center;
+  }
+  .user-detail-update .phone-update .phone-heading-update{
+    display: inline;
+    color: #ffffff;
+    width: 25%;
+    padding-top: 15px;
+    float: left;
+    font-size: 14px;
+  }
+  .user-detail-update .phone-update .phone-address-update{
+    display: inline;
+    color: #ffffff;
+    padding-top: 2px;
+    width: 55%;
+    float: right;
+    font-size: 14px;
+  }
+
+
+  .user-detail-update .exhibition-update{
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    //background: red;
+  }
+  .user-detail-update .exhibition-update .exhi-icon-update{
+    display: inline;
+    float: left;
+    color: #fec733;
+    text-align: center;
+    width: 12%;
+  }
+  .user-detail-update .exhibition-update .exhi-icon-update .ex-icon-update{
+    color: #fec733;
+    font-size: 20px;
+    text-align: center;
+  }
+  .user-detail-update .exhibition-update .exhi-heading-update{
+    display: inline;
+    color: #ffffff;
+    width: 25%;
+    padding-top: 15px;
+    float: left;
+    font-size: 14px;
+  }
+  .user-detail-update .exhibition-update .exhi-address-update{
+    display: inline;
+    color: #ffffff;
+    padding-top: 2px;
+    width: 55%;
+    float: right;
+    font-size: 14px;
+  }
+
+  .edit-button-update{
+    padding-top: 30px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .goback{
+    width: 50%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .goback button{
+    width: 100%;
+    display: block;
+    background: #fec733;
+    border: 1px solid #fff;
+  }
+  .update-btn{
+    width: 50%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .update-btn button{
+    width: 100%;
+    display: block;
+    background: #fec733;
+    border: 1px solid #fff;
+  }
+  .email-icon-update{
+    padding-top: 15px;
+  }
+  .phone-icon-update{
+    padding-top: 15px;
+  }
+  .exhi-icon-update{
+    padding-top: 15px;
+  }
+
+  .input-ios[clearInput] .text-input {
+    padding-right: 0!important;
+  }
+
+  .element.style {
+  }
+  .input-ios[clearInput] .text-input {
+    padding-right: 0!important;
+  }
+  .text-input-ios {
+    margin:0!important;
+    padding: 0;
+    width: calc(100% - 8px);
+  }
+  .item-ios.item-block .item-inner {
+    padding-right: 0!important;
+    //border-bottom: 0.55px solid #c8c7cc;
+    border-bottom: none!important;
+  }
+
+  .item-ios {
+    padding-left: 0!important;
+    border-radius: 0;
+    position: relative;
+    font-size: 1.7rem;
+    color: #000;
+    background-color: #fff;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+  }
+
+  .item-ios .item-inner .input-ios{
+    padding-left: 0!important;
+    border-radius: 0;
+    position: relative;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: transparent!important;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+  }
+  .item-ios .item-inner .input-wrapper{
+    padding-left: 0!important;
+    border-radius: 0;
+    position: relative;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: transparent!important;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+  }
+
+}

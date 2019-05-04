@@ -1,0 +1,180 @@
+page-help {
+
+  ion-content{
+    background-image: url("../../assets/content/img/bg.png")!important;
+    //background-color: transparent!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .main{
+    width: 100%;
+    //position: absolute;
+    //left: 50%;
+    //margin-left: -150px;
+    //margin-top: -150px;
+    //background: rgba(0, 0, 0, 0.6);
+  }
+
+  .main-text > p{
+    color: #fec733;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+  .top-heading{
+    font-size: 25px;
+    width: 60%!important;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 300;
+  }
+  ion-img{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+  }
+  ion-img > .img-ion{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+  }
+  .img-ion1{
+    width: 30px!important;
+    background: transparent;
+  }
+  .input-wrapper{
+    padding-left: 10px;
+  }
+  #myclass {
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  #myclass2 {
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  #myclass3 {
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  #myclass4 {
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  #myclass5 {
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  #myclass6 {
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+
+  ion-item > .item-inner{
+    width: 100%;
+    padding: 0!important;
+  }
+
+  .item-label-floating{
+    background-color: transparent!important;
+  }
+  .list-md .item-block .item-inner {
+    border-bottom: none!important;
+    background: transparent!important;
+  }
+  .list-md .item-input:last-child {
+    border-bottom: none!important;
+  }
+  .item-md {
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-transform: none;
+    color: #000;
+    background-color: transparent!important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .item-inner{
+    background: transparent!important;
+    border: none!important;
+  }
+  .input-wrapper{
+    background: transparent!important;
+    border: none!important;
+  }
+  .item-md:nth-child(1){
+    border-top: none;
+    border-bottom: none;
+  }
+  .item-md:nth-child(14){
+    border-bottom: none;
+  }
+
+  #full-clmn{
+    margin: 0;
+    padding: 0;
+  }
+
+  .item-ios [item-left], .item-ios [item-start] {
+    margin: 8px 16px 8px 10px;
+  }
+
+  .item-ios{
+    padding-left: 0px!important;
+    border-radius: 0;
+    position: relative;
+    font-size: 1.7rem;
+    color: #000;
+    border: none!important;
+    //border-left: none!important;
+    //border-right: none!important;
+    background-color: transparent!important;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+  }
+  .item-ios.item-label-stacked .text-input, .item-ios.item-label-floating .text-input {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #fff!important;
+    letter-spacing: 0px;
+    width: calc(100% - 8px);
+  }
+
+  .list-ios > .item-block:first-child {
+    border-top: none!important;
+  }
+  .list-ios .item-block .item-inner {
+    border-bottom: none!important;
+  }
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: none!important;
+  }
+
+}

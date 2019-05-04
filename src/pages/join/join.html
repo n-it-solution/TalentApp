@@ -1,0 +1,112 @@
+<!--
+  Generated template for the JoinPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Join Talent</ion-title>
+    <button ion-button menuToggle right>
+      <ion-icon name="menu" color="light"></ion-icon>
+    </button>
+    <!--<ion-buttons left>
+      <button class="back-button disable-hover bar-button bar-button-md back-button-md bar-button-default bar-button-default-md show-back-button" ion-button="bar-button" ng-reflect-klass="back-button" ng-reflect-ng-class="back-button-md"><span class="button-inner"><ion-icon class="back-button-icon icon icon-md back-button-icon-md ion-md-arrow-back" role="img" ng-reflect-klass="back-button-icon" ng-reflect-ng-class="back-button-icon-md" aria-label="arrow back" ng-reflect-name="md-arrow-back"></ion-icon><span class="back-button-text back-button-text-md" ng-reflect-klass="back-button-text" ng-reflect-ng-class="back-button-text-md"></span></span><div class="button-effect"></div></button>
+    </ion-buttons>-->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row no-padding no-margin>
+      <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+        <div style="width: 100%; text-align: center;">
+          <div class="icon-image">
+            <ion-img class="img-ion" src="../../assets/content/img/clap.png"></ion-img>
+          </div>
+        </div>
+        <div style="">
+          <div class="main">
+            <div class="myform">
+              <div class="inner-text">
+                <ion-col col-md-12 id="full-clmn">
+                  <ion-list>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Talents</ion-label>
+                        <ion-select  multiple="false" [(ngModel)]="talentId" (ionChange)="talentChange()">
+                          <ion-option value="{{ i.id }}" *ngFor="let i of talentList">{{ i.name }}</ion-option>
+                        </ion-select>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Sub Talent</ion-label>
+                        <ion-select  multiple="false" [(ngModel)]="subTalentId">
+                          <ion-option value="{{ i.id }}" *ngFor="let i of subTalentList">{{ i.name }}</ion-option>
+                        </ion-select>
+                      </ion-item>
+                      <ion-item>
+                        <ion-range snaps="true" pin="true" min="0" max="60" step="15" [(ngModel)]="saturation" color="secondary">
+                          <ion-label range-left>0</ion-label>
+                          <ion-label range-right>60</ion-label>
+                        </ion-range>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Your Height</ion-label>
+                        <ion-input type="text" placeholder="example: 6" class="myinputs"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Your Gender</ion-label>
+                        <ion-select  multiple="false" interface="popover">
+                          <ion-option value="Male" >Male</ion-option>
+                          <ion-option value="Female" >Female</ion-option>
+                          <ion-option value="Other" >Other</ion-option>
+                        </ion-select>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Continent Of Origin</ion-label>
+                        <ion-select  multiple="false" interface="popover">
+                          <ion-option value="North America" >North America</ion-option>
+                          <ion-option value="South America" >South America</ion-option>
+                          <ion-option value="Antarctica" >Antarctica</ion-option>
+                          <ion-option value="Europe" >Europe</ion-option>
+                          <ion-option value="Asia" >Asia</ion-option>
+                          <ion-option value="Africa" >Africa</ion-option>
+                          <ion-option value="Australia" >Australia</ion-option>
+                        </ion-select>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Country You Live in Now</ion-label>
+                        <ion-input type="text" placeholder="example: USA" class="myinputs"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Your Number</ion-label>
+                        <ion-input type="text" placeholder="example: +15417543010" class="myinputs"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Your Mail</ion-label>
+                        <ion-input type="text" placeholder="example example@mail.com" class="myinputs"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Years Of Work Experience</ion-label>
+                        <ion-input type="text" placeholder="example: 2" class="myinputs"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label class="myinputslb" stacked>Extra Experience / Other Portfolio link</ion-label>
+                        <ion-input type="text" placeholder="Extra Experience / Other Portfolio link" class="myinputs"></ion-input>
+                      </ion-item>
+                  </ion-list>
+                </ion-col>
+              </div>
+            </div>
+
+            <div class="awesome-btn">
+              <button class="btn-awe" ion-button block outline>SUBMIT</button>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
