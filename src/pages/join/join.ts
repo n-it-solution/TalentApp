@@ -67,7 +67,7 @@ export class JoinPage {
         //   alert('Check your id and pass and try again')
         // }
       },error=> {
-        alert('something wrong plaease contact to site developer');
+        alert('something wrong plaease contact to site delveloper');
         console.log(error);
       });
   }
