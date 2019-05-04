@@ -73,7 +73,7 @@ export class JoinPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad JoinPag1ae');
+    console.log('ionViewDidLoad JoinPag1aae');
   }
 
 }
