@@ -35,24 +35,24 @@
             <div class="inner-text">
               <ion-grid>
                 <ion-row>
-                  <ion-col col-md-4 id="first">
-                    <a href="#" class="icon-links">
+                  <ion-col col-md-4 id="first" *ngIf="showData">
+                    <a href="{{ contact.fb }}" class="icon-links">
                       <div class="tw-icon-div">
                         <ion-icon name="logo-facebook"></ion-icon>
                         <p class="icons-text">Facebook</p>
                       </div>
                     </a>
                   </ion-col>
-                  <ion-col col-md-4 id="second">
-                    <a href="#" class="icon-links">
+                  <ion-col col-md-4 id="second" *ngIf="showData">
+                    <a href="{{ contact.tw }}" class="icon-links">
                       <div class="tw-icon-div">
                           <ion-icon name="logo-twitter"></ion-icon>
                           <p class="icons-text">Twitter</p>
                       </div>
                     </a>
                   </ion-col>
-                  <ion-col col-md-4 id="third">
-                    <a href="#" class="icon-links">
+                  <ion-col col-md-4 id="third" *ngIf="showData">
+                    <a href="{{ contact.ins }}" class="icon-links">
                       <div class="tw-icon-div">
                         <ion-icon name="logo-instagram"></ion-icon>
                         <p class="icons-text">Instagram</p>

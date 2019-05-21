@@ -27,6 +27,14 @@ import {NotificationPage} from "../pages/notification/notification";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { GlobalVariableProvider } from '../providers/global-variable/global-variable';
 import { Camera } from '@ionic-native/camera'
+import { ImagePicker } from "@ionic-native/image-picker";
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+import {WelcomePage} from "../pages/welcome/welcome";
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { BackgroundMode } from '@ionic-native/background-mode';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -47,13 +55,13 @@ import { Camera } from '@ionic-native/camera'
     ProfilePage,
     UpdateProfilePage,
     NotificationPage,
-    GalleryPage
+    GalleryPage,
+    WelcomePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    Camera
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -75,13 +83,20 @@ import { Camera } from '@ionic-native/camera'
     ProfilePage,
     UpdateProfilePage,
     NotificationPage,
-    GalleryPage
+    GalleryPage,
+    WelcomePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GlobalVariableProvider
+    GlobalVariableProvider,
+    Camera,
+    ImagePicker,
+    FileTransfer,
+    File,
+    LocalNotifications,
+    BackgroundMode
   ]
 })
 export class AppModule {}

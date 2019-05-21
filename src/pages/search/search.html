@@ -20,5 +20,6 @@
 
 
 <ion-content padding>
-
+  <ion-input type="text" [(ngModel)]="search" class="myinputs"></ion-input>
+  <button (click)="getTalents()" ion-button>Search</button>
 </ion-content>

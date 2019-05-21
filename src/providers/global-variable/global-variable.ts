@@ -10,9 +10,12 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GlobalVariableProvider {
   apiUrl:string;
+  domain:string;
   constructor(public http: HttpClient) {
     console.log('Hello GlobalVariableProvider Provider');
-    this.apiUrl = 'http://talent.localhost/api'
+    this.domain = 'http://192.168.1.6';
+    this.apiUrl = 'http://192.168.1.6/api';
+    // this.apiUrl = 'http://192.168.0.115/api';
   }
 
 }

@@ -20,6 +20,7 @@ import {UpdateProfilePage} from "../pages/update-profile/update-profile";
 import {TestPage} from "../pages/test/test";
 import {GalleryPage} from "../pages/gallery/gallery";
 import {NotificationPage} from "../pages/notification/notification";
+import {WelcomePage} from "../pages/welcome/welcome";
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +28,7 @@ import {NotificationPage} from "../pages/notification/notification";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = JoinPage;
+  rootPage: any = WelcomePage;
 
   pages: Array<{title: string, component: any}>;
 

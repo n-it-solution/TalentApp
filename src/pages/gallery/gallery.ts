@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Events, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {HttpClient} from "@angular/common/http";
+import {GlobalVariableProvider} from "../../providers/global-variable/global-variable";
 
 /**
  * Generated class for the GalleryPage page.
@@ -14,8 +16,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'gallery.html',
 })
 export class GalleryPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  search:string;
+  data:any;
+  showSlides:boolean = false;
+  images:any = [];
+  getImages(){
+    console.log(1);
+    this.data = this.httpClient.get(this.globalVar.apiUrl + '/user/images/156' + this.search);
+    this.data
+      .subscribe(data => {
+        console.log(data);
+        this.images = data;
+        this.showSlides = true;
+      },error=> {
+        console.log(error);
+      });
+  }
+  constructor(public navCtrl: NavController, public navParams: NavParams,public httpClient: HttpClient,
+              public globalVar: GlobalVariableProvider,public events: Events)
+  {
+    this.getImages();
   }
 
   ionViewDidLoad() {
