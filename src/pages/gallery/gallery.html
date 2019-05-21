@@ -13,16 +13,8 @@
 
 
 <ion-content padding>
-
   <ion-grid no-padding>
-    <ion-row no-padding>
-      <div *ngIf="showSlides">
-        <ion-slides autoplay="3000" pager loop="true" effect="false">
-          <ion-slide *ngFor="let i of images" >
-            <img src="{{ globalVar.domain }}/{{ i.img }}" alt="" style="height: 200px">
-          </ion-slide>
-        </ion-slides>
-      </div>
+    <ion-row no-padding *ngIf="showSlides">
     </ion-row>
   </ion-grid>
 
