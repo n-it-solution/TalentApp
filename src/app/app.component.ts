@@ -41,7 +41,7 @@ export class MyApp {
     { title: 'Contact Us', component: ContactPage },
     { title: 'Awesome', component: AwesomePage },
     { title: 'Visit Site', component: VisitingPage },
-    // { title: 'Customer Service', component: CustomerPage },
+    { title: 'Customer Service', component: CustomerPage },
     { title: 'Partnership', component: PartnershipPage },
     { title: 'Concern/Suggestion', component: SuggesionPage }
   ];
@@ -52,7 +52,7 @@ export class MyApp {
     { title: 'Contact Us', component: ContactPage },
     { title: 'Awesome', component: AwesomePage },
     { title: 'Visit Site', component: VisitingPage },
-    // { title: 'Customer Service', component: CustomerPage },
+    { title: 'Customer Service', component: CustomerPage },
     { title: 'Partnership', component: PartnershipPage },
     { title: 'Concern/Suggestion', component: SuggesionPage },
     { title: 'Join Talent', component: JoinPage },

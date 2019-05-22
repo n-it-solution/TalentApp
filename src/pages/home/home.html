@@ -37,11 +37,11 @@
                 </div>-->
 
             <div style="width: 100%; height: auto; border-radius:10px; background: rgba(0, 0, 0, 0.6); padding-top: 20px; margin: 0 auto;">
-              <div style="width: 90%; margin: 0 auto;" *ngIf="showSlides">
+              <div style="width: 90%; margin: 0 auto;">
                 <ion-slides autoplay="3000" speed="2000" pager loop="true" effect="fade">
-                  <ion-slide *ngFor="let i of images">
+                  <ion-slide *ngFor="let number of [1,2,3,4,5,6,7,8,9,10]">
                     <div>
-                      <img src="{{ globalVar.domain }}/{{ i.img }}" style=" border-radius:10px;" alt="">
+                      <img src="../../assets/content/img/slide/{{number}}.png" style=" border-radius:10px;" alt="">
                     </div>
                   </ion-slide>
                 </ion-slides>

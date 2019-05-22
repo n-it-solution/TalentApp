@@ -35,42 +35,42 @@
               <div class="inner-text">
                 <ion-col col-md-12 id="full-clmn">
                   <ion-list>
-                    <ion-item id="myclass">
+                    <ion-item id="myclass" *ngIf="!globalVar.loginStatus" (click)="openJoin()">
                       <ion-img class="img-ion" src="../../assets/content/img/clap.png" item-start></ion-img>
                       <!--<ion-icon name="leaf" item-start></ion-icon>-->
                       <span style="color: #fff;">Want to join Talents</span>
                       <ion-img class="img-ion1" src="../../assets/content/img/right-arrow.png" item-end></ion-img>
                       <!--<ion-icon name="rose" item-end></ion-icon>-->
                     </ion-item>
-                    <ion-item id="myclass2">
-                      <ion-img class="img-ion" src="../../assets/content/img/search.png" item-start></ion-img>
-                      <!--<ion-icon name="leaf" item-start></ion-icon>-->
-                      <span style="color: #fff;">Talent Search</span>
-                      <ion-img class="img-ion1" src="../../assets/content/img/right-arrow.png" item-end></ion-img>
-                      <!--<ion-icon name="rose" item-end></ion-icon>-->
-                    </ion-item>
-                    <ion-item id="myclass3">
+<!--                    <ion-item id="myclass2">-->
+<!--                      <ion-img class="img-ion" src="../../assets/content/img/search.png" item-start></ion-img>-->
+<!--                      &lt;!&ndash;<ion-icon name="leaf" item-start></ion-icon>&ndash;&gt;-->
+<!--                      <span style="color: #fff;">Talent Search</span>-->
+<!--                      <ion-img class="img-ion1" src="../../assets/content/img/right-arrow.png" item-end></ion-img>-->
+<!--                      &lt;!&ndash;<ion-icon name="rose" item-end></ion-icon>&ndash;&gt;-->
+<!--                    </ion-item>-->
+                    <ion-item id="myclass3" (click)="openVisit()">
                       <ion-img class="img-ion" src="../../assets/content/img/location.png" item-start></ion-img>
                       <!--<ion-icon name="leaf" item-start></ion-icon>-->
                       <span style="color: #fff;">Just Visiting</span>
                       <ion-img class="img-ion1" src="../../assets/content/img/right-arrow.png" item-end></ion-img>
                       <!--<ion-icon name="rose" item-end></ion-icon>-->
                     </ion-item>
-                    <ion-item id="myclass4">
+                    <ion-item id="myclass4" (click)="openCustomerService()">
                       <ion-img class="img-ion" src="../../assets/content/img/service.png" item-start></ion-img>
                       <!--<ion-icon name="leaf" item-start></ion-icon>-->
                       <span style="color: #fff;">Customer Service</span>
                       <ion-img class="img-ion1" src="../../assets/content/img/right-arrow.png" item-end></ion-img>
                       <!--<ion-icon name="rose" item-end></ion-icon>-->
                     </ion-item>
-                    <ion-item id="myclass5">
+                    <ion-item id="myclass5" (click)="openConcern()">
                       <ion-img class="img-ion" src="../../assets/content/img/idea.png" item-start></ion-img>
                       <!--<ion-icon name="leaf" item-start></ion-icon>-->
                       <span style="color: #fff;">Concern/Suggestion</span>
                       <ion-img class="img-ion1" src="../../assets/content/img/right-arrow.png" item-end></ion-img>
                       <!--<ion-icon name="rose" item-end></ion-icon>-->
                     </ion-item>
-                    <ion-item id="myclass6">
+                    <ion-item id="myclass6" (click)="openParShip()">
                       <ion-img class="img-ion" src="../../assets/content/img/partner.png" item-start></ion-img>
                       <!--<ion-icon name="leaf" item-start></ion-icon>-->
                       <span style="color: #fff;">Partnership/Business</span>

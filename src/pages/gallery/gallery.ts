@@ -21,7 +21,7 @@ export class GalleryPage {
   images:any = [];
   getImages(){
     console.log(1);
-    this.data = this.httpClient.get(this.globalVar.apiUrl + '/user/images/156');
+    this.data = this.httpClient.get(this.globalVar.apiUrl + '/user/images/' + this.globalVar.loginData.data.id);
     this.data
       .subscribe(data => {
         console.log(data);
