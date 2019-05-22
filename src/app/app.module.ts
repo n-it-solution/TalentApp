@@ -8,6 +8,8 @@ import { ListPage } from '../pages/list/list';
 import {AwesomePage} from "../pages/awesome/awesome";
 import {ContactPage} from "../pages/contact/contact";
 
+import { IonicStorageModule } from '@ionic/storage';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {VisitingPage} from "../pages/visiting/visiting";
@@ -61,6 +63,7 @@ import { BackgroundMode } from '@ionic-native/background-mode';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
     HttpClientModule,
   ],
   bootstrap: [IonicApp],

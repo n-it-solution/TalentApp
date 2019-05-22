@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Events, IonicPage, NavController, NavParams} from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import {Storage} from '@ionic/storage';
+import {GlobalVariableProvider} from "../../providers/global-variable/global-variable";
+import {WelcomePage} from "../welcome/welcome";
 /**
  * Generated class for the LoginPage page.
  *
@@ -31,7 +34,10 @@ export class LoginPage {
       .subscribe(data => {
         console.log(data);
         if (data.status == 'success'){
-          alert('Welcome MR/MISS '+data.data.name)
+          this.storage.set('loginData', data);
+          this.events.publish('login:success',data);
+          alert('Welcome MR/MISS '+data.data.name);
+          this.navCtrl.setRoot(WelcomePage);
         }else {
           alert('Check your id and pass and try again')
         }
@@ -41,8 +47,10 @@ export class LoginPage {
       });
   }
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public httpClient: HttpClient,
+              public httpClient: HttpClient,private storage: Storage,public events: Events
   ) {
+    storage.set('test','aa');
+    storage.get('test1').then((data) => {console.log(data)}).catch((error) => {console.log(error)})
   }
 
   ionViewDidLoad() {

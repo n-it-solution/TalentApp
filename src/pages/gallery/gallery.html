@@ -15,8 +15,11 @@
 <ion-content padding>
   <ion-grid no-padding>
     <ion-row no-padding *ngIf="showSlides">
+        <ion-col col-4 *ngFor="let i of images">
+          <div class="gallery-img">
+            <img src="{{ globalVar.domain }}/{{ i.img }}" alt="">
+          </div>
+        </ion-col>
     </ion-row>
   </ion-grid>
-
-
 </ion-content>

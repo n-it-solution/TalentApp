@@ -7,6 +7,9 @@ import { BackgroundMode } from '@ionic-native/background-mode';
 import {GlobalVariableProvider} from "../../providers/global-variable/global-variable";
 import {SearchPage} from "../search/search";
 import {GalleryPage} from "../gallery/gallery";
+import {HomePage} from "../home/home";
+import {LoginPage} from "../login/login";
+import {Storage} from "@ionic/storage";
 
 /**
  * Generated class for the WelcomePage page.
@@ -43,9 +46,22 @@ export class WelcomePage {
         console.log(error);
       });
   }
+  checkLogin(){
+    console.log('hello');
+    // this.storage.remove('loginData');
+    this.storage.get('loginData').then((data)=>{
+      // console.log(data);
+      if(data != undefined){
+        console.log(data);
+        this.events.publish('login:success',data)
+      }
+    })
+  }
   constructor(public navCtrl: NavController, public navParams: NavParams, private lclNot: LocalNotifications,public httpClient: HttpClient,
-              private backgroundMode: BackgroundMode, public globalVar: GlobalVariableProvider,public events: Events
+              private backgroundMode: BackgroundMode, public globalVar: GlobalVariableProvider,public events: Events,private storage: Storage,
+
   ) {
+    this.checkLogin();
     if(!backgroundMode.isEnabled()){
       this.backgroundMode.enable();
     }
@@ -58,7 +74,7 @@ export class WelcomePage {
     //   console.log('function called');
     //   events.publish('user:created');
     // }, 10000);
-    navCtrl.setRoot(GalleryPage);
+    navCtrl.setRoot(HomePage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
