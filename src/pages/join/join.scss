@@ -1,4 +1,17 @@
 page-join {
+  .list-ios > .item-block:first-child{
+    border-top: none!important;
+    border-bottom: none!important;
+  }
+
+  .item-label-stacked .select-ios, .item-label-floating .select-ios{
+    border: 1px solid goldenrod;
+    background: black!important;
+  }
+  .range-ios-secondary .range-bar-active, .range-ios-secondary .range-tick-active{
+    background: goldenrod!important;
+    height: 3px!important;
+  }
 
   ion-content{
     background-image: url("../../assets/content/img/bg.png")!important;
@@ -172,22 +185,31 @@ page-join {
 
 
   .item-ios{
-      padding-left: 0px!important;
-      border-radius: 0;
-      position: relative;
-      font-size: 1.7rem;
-      color: #000;
-      background-color: transparent!important;
-      -webkit-transition: background-color 200ms linear;
-      transition: background-color 200ms linear;
+    padding-left: 0px!important;
+    border-radius: 0;
+    position: relative;
+    font-size: 1.7rem;
+    color: #000;
+    background-color: transparent!important;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
   }
   .item-ios.item-label-stacked .text-input, .item-ios.item-label-floating .text-input {
     margin-left: 0;
     margin-top: 8px;
     margin-bottom: 8px;
     color: #fff!important;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     width: calc(100% - 8px);
   }
+
+  .item-label-stacked .select-md, .item-label-floating .select-md{
+    border: 1px solid #fec733 !important;
+    padding: 0 10px !important;
+    //width: 100% !important;
+    font-size: 15px;
+    background: black;
+  }
+
 
 }

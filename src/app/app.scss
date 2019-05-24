@@ -28,12 +28,26 @@ ion-content .content-ios{
 }
 .content-ios {
   color: #fff!important;
-  background-color: transparent!important;
+  background-color: #000!important;
+}
+.content-md {
+  //border-right: 5px darkgray!important;
+  color: #fff!important;
+  background-color: #000!important;
 }
 
-.item-md.item-block .item-inner {
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+  border-bottom:none!important;
+}
+.list-ios > .item-block:first-child{
+  border-top: 5px solid darkgray;
+  border-bottom: 1px solid darkgray;
+}
+
+.item-md .item-block .item-inner {
   padding-right: 8px;
-  border-bottom: 1px solid #dedede;
+  //border-bottom: 1px solid #dedede;
   background: rgba(0,0,0,0.9)!important;
 }
 .list-md {
@@ -48,8 +62,8 @@ ion-content .content-ios{
   background: transparent;
   padding-left: 0;
   padding-right: 0;
-  border-left: 2px solid #dedede;
-  border-right: 1px solid #dedede;
+  //border-left: 2px solid #dedede;
+  //border-right: 1px solid #dedede;
   position: relative;
   font-size: 1.6rem;
   font-weight: normal;
@@ -66,8 +80,9 @@ ion-content .content-ios{
   border-bottom: 1px solid #dedede;
 }
 .item-md:nth-child(14){
-  border-bottom: 2px solid #dedede;
+  //border-bottom: 2px solid #dedede;
 }
+
 .item-inner{
   background: transparent;
 }
@@ -89,7 +104,7 @@ ion-content .content-ios{
 //ios navbar settings
 .item-ios .item-block .item-inner {
   padding-right: 0!important;
-  border-bottom: 1px solid #dedede;
+  //border-bottom: 1px solid #dedede;
   background: rgba(0,0,0,0.9)!important;
 }
 .list-ios .item-block .item-inner {
@@ -105,8 +120,8 @@ ion-content .content-ios{
   background: transparent;
   padding-left: 0;
   padding-right: 0;
-  border-left: 1px solid #dedede;
-  border-right: 1px solid #dedede;
+  //border-left: 1px solid #dedede;
+  //border-right: 1px solid #dedede;
   position: relative;
   font-size: 1.6rem;
   font-weight: normal;
@@ -119,11 +134,11 @@ ion-content .content-ios{
 }
 
 .item-ios:nth-child(1){
-  border-top: 5px solid #dedede;
-  border-bottom: 1px solid #dedede;
+  //border-top: 5px solid #dedede;
+  //border-bottom: 1px solid #dedede;
 }
 .item-ios:nth-child(14){
-  border-bottom: 2px solid #dedede;
+  //border-bottom: 2px solid #dedede;
 }
 .item-inner{
   background: transparent;
