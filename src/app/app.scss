@@ -196,3 +196,43 @@ ion-navbar .toolbar .toolbar-ios .statusbar-padding .menutoggle{
   //background: greenyellow;
 }
 
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+  color: #fff!important;
+  background-color: transparent;
+}
+
+.popover-ios .popover-content {
+  border-radius: 10px;
+  width: 200px;
+  min-width: 0;
+  min-height: 0;
+  max-height: 90%;
+  color: #000;
+  background: #000!important;
+}
+.list-ios > .item-block:first-child{
+  border-bottom: none!important;
+}
+
+.popover-md .popover-content {
+  border-radius: 10px;
+  width: 200px;
+  min-width: 0;
+  min-height: 0;
+  max-height: 90%;
+  color: #000;
+  background: #000!important;
+}
+.list-md > .item-block:first-child{
+  border-bottom: none!important;
+}
+
+.range-ios.range-has-pin{
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+  color: #fff!important;
+  background-color: transparent;
+}

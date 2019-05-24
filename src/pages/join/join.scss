@@ -6,9 +6,31 @@ page-join {
 
   .item-label-stacked .select-ios, .item-label-floating .select-ios{
     border: 1px solid goldenrod;
+    padding-left: 9px;
+    color: darkgray;
+    font-size: 14px;
+    background: black!important;
+  }
+
+  .item-label-stacked .select-md, .item-label-floating .select-md{
+    border: 1px solid goldenrod;
+    padding-left: 9px;
+    color: darkgray;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
     background: black!important;
   }
   .range-ios-secondary .range-bar-active, .range-ios-secondary .range-tick-active{
+    background: goldenrod!important;
+    height: 3px!important;
+  }
+
+  .item-label-stacked .select-md, .item-label-floating .select-md{
+    border: 1px solid goldenrod;
+    background: black!important;
+  }
+  .range-md-secondary .range-bar-active, .range-md-secondary .range-tick-active{
     background: goldenrod!important;
     height: 3px!important;
   }
