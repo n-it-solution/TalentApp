@@ -13,7 +13,7 @@ export class HomePage {
   images:any = [];
   getTalents(){
     console.log(1);
-    this.data = this.httpClient.get(this.globalVar.apiUrl + '/talent/talents');
+    this.data = this.httpClient.get(this.globalVar.apiUrl + '/slides');
     this.data
       .subscribe(data => {
         console.log(data);

@@ -23,19 +23,19 @@ import {PartnershipPage} from "../partnership/partnership";
 })
 export class HelpPage {
   openJoin(){
-    this.navCtrl.setRoot(JoinPage);
+    this.navCtrl.push(JoinPage);
   }
   openVisit(){
-    this.navCtrl.setRoot(VisitingPage);
+    this.navCtrl.push(VisitingPage);
   }
   openCustomerService(){
-    this.navCtrl.setRoot(CustomerPage);
+    this.navCtrl.push(CustomerPage);
   }
   openConcern(){
-    this.navCtrl.setRoot(SuggesionPage);
+    this.navCtrl.push(SuggesionPage);
   }
   openParShip(){
-    this.navCtrl.setRoot(PartnershipPage);
+    this.navCtrl.push(PartnershipPage);
   }
   constructor(public navCtrl: NavController, public navParams: NavParams, public globalVar: GlobalVariableProvider,public events: Events,
     public httpClient: HttpClient) {
