@@ -231,8 +231,25 @@ ion-navbar .toolbar .toolbar-ios .statusbar-padding .menutoggle{
   padding: 0!important;
   margin: 0!important;
 }
+.range-md.range-has-pin{
+  padding: 0!important;
+  margin: 0!important;
+}
 
 .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
   color: #fff!important;
   background-color: transparent;
+}
+.bar-button-default-md, .bar-button-default.bar-button-md-default, .bar-button-clear-md-default {
+  color: #fff!important;
+  background-color: transparent;
+}
+
+.range-md-secondary .range-bar-active, .range-md-secondary .range-knob, .range-md-secondary .range-pin, .range-md-secondary .range-pin::before {
+  background: white!important;
+  color: #333!important;
+}
+.range-ios-secondary .range-bar-active, .range-ios-secondary .range-knob, .range-ios-secondary .range-pin, .range-ios-secondary .range-pin::before {
+  background: white!important;
+  color: #333!important;
 }
