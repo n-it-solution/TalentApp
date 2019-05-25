@@ -39,7 +39,7 @@
             <div style="width: 100%; height: auto; border-radius:10px; background: rgba(0, 0, 0, 0.6); padding-top: 20px; margin: 0 auto;">
               <div style="width: 90%; margin: 0 auto;" *ngIf="showSlides">
                 <ion-slides autoplay="3000" speed="2000" pager loop="true" effect="fade">
-                  <ion-slide *ngFor="let number of images">
+                  <ion-slide *ngFor="let i of images">
                     <div>
                       <img src="{{ globalVar.domain }}/{{ i.img }}" style=" border-radius:10px;" alt="">
                     </div>

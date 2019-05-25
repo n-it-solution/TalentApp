@@ -38,19 +38,19 @@
 
                       <ion-item>
                         <ion-label>Inquiry Department</ion-label>
-                        <ion-checkbox class="custom" color="golden" [(ngModel)]="pepperoni"></ion-checkbox>
+                        <ion-checkbox class="custom" color="golden" [(ngModel)]="cs.inquiry"></ion-checkbox>
                       </ion-item>
                       <ion-item>
                         <ion-label>Transaction Issue</ion-label>
-                        <ion-checkbox color="golden" [(ngModel)]="sausage"></ion-checkbox>
+                        <ion-checkbox color="golden" [(ngModel)]="cs.transaction"></ion-checkbox>
                       </ion-item>
                       <ion-item>
                         <ion-label>Booking Appointment</ion-label>
-                        <ion-checkbox color="golden" [(ngModel)]="mushrooms"></ion-checkbox>
+                        <ion-checkbox color="golden" [(ngModel)]="cs.booking"></ion-checkbox>
                       </ion-item>
                       <ion-item>
                         <ion-label>Tech Department</ion-label>
-                        <ion-checkbox color="golden" [(ngModel)]="cucumber"></ion-checkbox>
+                        <ion-checkbox color="golden" [(ngModel)]="cs.tech"></ion-checkbox>
                       </ion-item>
                     </div>
                   </ion-col>
@@ -58,7 +58,7 @@
               </ion-grid>
             </div>
             <div class="awesome-btn">
-              <button class="btn-awe" ion-button block outline>CONTINUE</button>
+              <button class="btn-awe" (click)="submitCS()" ion-button block outline>CONTINUE</button>
             </div>
           </div>
         </div>

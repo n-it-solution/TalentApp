@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Events, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {HttpClient} from "@angular/common/http";
+import {GlobalVariableProvider} from "../../providers/global-variable/global-variable";
 
 /**
  * Generated class for the CustomerPage page.
@@ -14,8 +16,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'customer.html',
 })
 export class CustomerPage {
+  data:any;
+  fist:boolean;
+  cs:Object = {inquiry: false, transaction: false, booking: false, tech: false};
+  submitCS(){
+    console.log(this.cs);
+    let data1 = JSON.stringify(this.cs);
+    this.data = this.httpClient.post(this.globalVar.apiUrl + '/cs/submit',{cs : data1});
+    this.data
+      .subscribe(data => {
+        console.log(data);
+        alert('Your request has been submit')
+      },error=> {
+        console.log(error);
+        alert('Something wrong!')
+      });
+  }
+  constructor(public navCtrl: NavController, public navParams: NavParams,public httpClient: HttpClient,
+              public globalVar: GlobalVariableProvider,public events: Events) {
+    console.log(1);
+    console.log(1);
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
