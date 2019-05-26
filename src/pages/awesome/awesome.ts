@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {GlobalVariableProvider} from "../../providers/global-variable/global-variable";
 
 /**
  * Generated class for the AwesomePage page.
@@ -15,7 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AwesomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public globalVar: GlobalVariableProvider) {
   }
 
   ionViewDidLoad() {

@@ -8,6 +8,7 @@ import { ImagePicker } from "@ionic-native/image-picker";
 import { ImagePickerOptions } from "@ionic-native/image-picker";
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
+import {AwesomePage} from "../awesome/awesome";
 /**
  * Generated class for the JoinPage page.
  *
@@ -99,21 +100,23 @@ export class JoinPage {
   data1 = {doc:'hello'};
   images: any = [];
   uploadImageCheck(){
-    alert('hello');
+    // alert('hello');
     for (var i = 0; i < this.images.length; i++) {
       if(!this.images[i].status){
         // alert(this.images[i]);
         this.uploadImage(this.images[i].imageUri,i);
         return false
+      }else {
+        this.navCtrl.setRoot(AwesomePage);
       }
     }
   }
   uploadImage(source,index){
     this.data1.doc = source;
-    this.data = this.httpClient.post('http://192.168.0.111/api/user/img-upload/' + this.userData.id,this.data1);
+    this.data = this.httpClient.post(this.globalVar.apiUrl + '/user/img-upload/' + this.userData.id,this.data1);
     this.data
       .subscribe(data => {
-        alert(JSON.stringify(data));
+        // alert(JSON.stringify(data));
         this.images[index].status = true;
         this.uploadImageCheck();
         // if (data.status == 'success'){

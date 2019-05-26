@@ -63,6 +63,9 @@ export class WelcomePage {
   ) {
     this.checkLogin();
     if(!backgroundMode.isEnabled()){
+      backgroundMode.setDefaults({
+        silent: true,
+      });
       this.backgroundMode.enable();
     }
     console.log(1);

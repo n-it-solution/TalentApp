@@ -39,18 +39,17 @@ export class MyApp {
     { title: 'How Can We Help You', component: HelpPage },
     { title: 'Gallery', component: GalleryPage },
     { title: 'Contact Us', component: ContactPage },
-    { title: 'Awesome', component: AwesomePage },
     { title: 'Visit Site', component: VisitingPage },
     { title: 'Customer Service', component: CustomerPage },
     { title: 'Partnership', component: PartnershipPage },
-    { title: 'Concern/Suggestion', component: SuggesionPage }
+    { title: 'Concern/Suggestion', component: SuggesionPage },
+    { title: 'Logout', component: JoinPage }
   ];
   withOutLoginMenu: Array<{title: string, component: any}> = [
     { title: 'Home', component: HomePage },
     { title: 'My Account', component: LoginPage },
     { title: 'How Can We Help You', component: HelpPage },
     { title: 'Contact Us', component: ContactPage },
-    { title: 'Awesome', component: AwesomePage },
     { title: 'Visit Site', component: VisitingPage },
     { title: 'Customer Service', component: CustomerPage },
     { title: 'Partnership', component: PartnershipPage },
@@ -66,7 +65,11 @@ export class MyApp {
       this.globalVar.loginData = data;
       console.log('login Success');
       this.pages = this.loginMenu;
-      this.pages.push({ title: 'Logout', component: JoinPage });
+      // let menu = [];
+      // menu = this.loginMenu;
+      // menu.push({ title: 'Logout', component: JoinPage });
+      // this.pages = menu;
+      // this.pages.push({ title: 'Logout', component: JoinPage });
       console.log(this.pages);
       // this.pages.splice(1,1);
       // console.log(this.pages);
