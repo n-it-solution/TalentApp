@@ -7,11 +7,46 @@ page-awesome {
     background-size: cover;
   }
 
+  .item-md:nth-child(1) {
+    border-top: none!important;
+    border-bottom: none!important;
+  }
+
+  .item.item-ios .checkbox-ios {
+    position: static;
+    display: block;
+    margin: 8px 8px 8px 2px!important;
+  }
+  .item.item-md .checkbox-md {
+    position: static;
+    display: block;
+    margin: 8px 8px 8px 2px!important;
+  }
+
+  .input-wrapper {
+    background: transparent!important;
+    padding-left: 15px;
+    color: #ffffff;
+  }
+  .item-ios.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: none!important;
+  }
+  .item-md.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: none!important;
+  }
+
+
+
+
+
+
   .main{
     width: 100%;
     position: absolute;
     //left: 50%;
-    top: 20%;
+    top: 10%;
     //margin-left: -150px;
     //margin-top: -150px;
     background: rgba(0, 0, 0, 0.6);
