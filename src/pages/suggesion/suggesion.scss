@@ -61,6 +61,7 @@ page-suggesion {
     padding-bottom: 12px;
     text-align: center;
     width: 98%;
+    height: 85px;
     margin: auto;
     color: #fec733;
     font-size: 30px;
@@ -72,6 +73,7 @@ page-suggesion {
     padding-bottom: 12px;
     text-align: center;
     width: 98%;
+    height: 85px;
     margin: auto;
     color: #fec733;
     font-size: 30px;
@@ -80,6 +82,7 @@ page-suggesion {
     background: rgba(62, 43, 12, 0.8);
     padding-top: 12px;
     border-radius:10px;
+    height: 85px;
     padding-bottom: 12px;
     text-align: center;
     width: 98%;
@@ -122,10 +125,15 @@ page-suggesion {
     margin-bottom: 5px!important;
   }
   .icons-text{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     color: #ffffff;
     font-size: 15px;
+  }
+
+  a{
+    text-decoration: none!important;
+    color: #fec733!important;
   }
 
 
