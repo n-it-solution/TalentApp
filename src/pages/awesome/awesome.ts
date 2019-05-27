@@ -15,8 +15,9 @@ import {GlobalVariableProvider} from "../../providers/global-variable/global-var
   templateUrl: 'awesome.html',
 })
 export class AwesomePage {
-
+  copyed:boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams,public globalVar: GlobalVariableProvider) {
+  console.log(navParams.get('userData'))
   }
 
   ionViewDidLoad() {

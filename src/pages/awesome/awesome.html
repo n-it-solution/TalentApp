@@ -38,7 +38,7 @@
               </p>
 
               <div class="awesome-link">
-                <a href="{{ globalVar.domain }}/subscribe">www.worldctalenthubb.com</a>
+                <a href="{{ globalVar.domain }}/login" *ngIf="copyed">www.worldctalenthubb.com</a>
               </div>
 
               <div style="width: 90%; text-align: center; color: #fec733; margin: 0 auto;">
@@ -46,18 +46,20 @@
               </div>
               <div style="width: 55%; text-align: center; line-height: 1.7em; font-size: 14px; margin: 0 auto;">
                 Login Detail: <br>
-                Talent ID [ 224 ] <br>
-                Password [ ASfkjlSE8 ]
+                Talent ID [ {{ navParams.get('userData').id }} ] <br>
+                Password [ {{ navParams.get('userData').pass }} ]
               </div>
               <div style="width: 56%; text-align: center; margin: 0 auto;">
                 <ion-item>
                   <ion-label>Have You Copied ?</ion-label>
-                  <ion-checkbox color="golden"></ion-checkbox>
+                  <ion-checkbox color="golden" [(ngModel)]="copyed"></ion-checkbox>
                 </ion-item>
               </div>
             </div>
-            <div class="awesome-btn">
-              <button class="btn-awe" ion-button block outline>Continue To Website</button>
+            <div class="awesome-btn" *ngIf="copyed">
+              <a href="{{ globalVar.domain }}/login" *ngIf="copyed">
+                <button class="btn-awe" ion-button block outline>Continue To Website</button>
+              </a>
             </div>
           </div>
         </div>

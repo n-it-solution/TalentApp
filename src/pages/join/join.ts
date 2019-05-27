@@ -9,6 +9,7 @@ import { ImagePickerOptions } from "@ionic-native/image-picker";
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import {AwesomePage} from "../awesome/awesome";
+import {el} from "@angular/platform-browser/testing/src/browser_util";
 /**
  * Generated class for the JoinPage page.
  *
@@ -31,27 +32,28 @@ export class JoinPage {
                       phone1: "", age: 0, talent: 0
                     };
   joinTalent(){
-    console.log(this.joinData);
-    this.data = this.httpClient.post(this.globalVar.apiUrl + '/user/join-talent',this.joinData);
-    this.data
-      .subscribe(data => {
-        console.log(data);
-        this.userData = data;
-        this.uploadImageCheck();
-        // alert(JSON.stringify(data));
-        // this.images[index].status = true;
-        // this.uploadImageCheck();
-        // if (data.status == 'success'){
-        //   alert('Welcome MR/MISS '+data.data.name)
-        // }else {
-        //   alert('Check your id and pass and try again')
-        // }
-      },error=> {
-        console.log(error);
-        // alert('something wrong please contact to site developer');
-        // alert(JSON.stringify(error));
-        console.log(error);
-      });
+    if(this.images.length > 0){
+      console.log(this.joinData);
+      if(this.joinData.name == '' || this.joinData.height == '' || this.joinData.gender == '' ||
+        this.joinData.countryOrigin == '' || this.joinData.countryLiveIn == '' || this.joinData.email == ''
+         || this.joinData.phone1 == '' || this.joinData.age <= 0 ||
+        this.joinData.talent == ''
+      ){
+        alert('Please Fill All the Details');
+      }else {
+        this.data = this.httpClient.post(this.globalVar.apiUrl + '/user/join-talent',this.joinData);
+        this.data
+          .subscribe(data => {
+            console.log(data);
+            this.userData = data;
+            this.uploadImageCheck();
+          },error=> {
+            console.log(error);
+          });
+      }
+    }else {
+      alert('Picture Must Be Selected')
+    }
   }
   getTalentList(){
     this.data = this.httpClient.get(this.globalVar.apiUrl + '/list/talent');
@@ -107,7 +109,7 @@ export class JoinPage {
         this.uploadImage(this.images[i].imageUri,i);
         return false
       }else {
-        this.navCtrl.setRoot(AwesomePage);
+        this.navCtrl.setRoot(AwesomePage,{userData: this.userData});
       }
     }
   }
@@ -131,9 +133,6 @@ export class JoinPage {
       });
   }
   selectPic(){
-    // console.log(this.data1);
-    // this.data1.doc = 'hello';
-    // console.log(this.data1);
     const options = {outputType:1};
     this.imagePicker.getPictures(options).then((results) => {
       for (var i = 0; i < results.length; i++) {

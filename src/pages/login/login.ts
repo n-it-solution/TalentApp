@@ -28,7 +28,7 @@ export class LoginPage {
         if (data.status == 'success'){
           this.storage.set('loginData', data);
           this.events.publish('login:success',data);
-          alert('Welcome MR/MISS '+data.data.name);
+          // alert('Welcome MR/MISS '+data.data.name);
           this.navCtrl.setRoot(WelcomePage);
         }else {
           alert('User ID or Password Is Incorrect')
