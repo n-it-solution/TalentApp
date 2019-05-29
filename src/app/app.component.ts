@@ -51,7 +51,7 @@ export class MyApp {
     { title: 'How Can We Help You', component: HelpPage },
     { title: 'Contact Us', component: ContactPage },
     { title: 'Visit Site', component: VisitingPage },
-    { title: 'Customer Service', component: CustomerPage },
+    // { title: 'Customer Service', component: CustomerPage },
     { title: 'Partnership', component: PartnershipPage },
     { title: 'Concern/Suggestion', component: SuggesionPage },
     { title: 'Join Talent', component: JoinPage },

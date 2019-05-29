@@ -24,7 +24,7 @@ export class NotificationPage {
   }
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient,
               public globalVar: GlobalVariableProvider) {
-    this.data = httpClient.get(this.globalVar.apiUrl + '/user/msg-list/156');
+    this.data = httpClient.get(this.globalVar.apiUrl + '/user/msg-list/' + this.globalVar.loginData.data.id);
     this.data.subscribe(data => {
       this.msg = data;
       console.log(this.msg);

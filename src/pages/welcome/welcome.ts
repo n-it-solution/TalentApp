@@ -26,25 +26,22 @@ import {Storage} from "@ionic/storage";
 export class WelcomePage {
   data:any;
   getMsg(){
-    this.data = this.httpClient.get(this.globalVar.apiUrl + '/user/msg-check/156');
-    this.data
-      .subscribe(data => {
-        console.log(data);
-        if (data.unViewed > 0){
-          this.lclNot.schedule({
-            id: 1,
-            text: 'You have '+data.unViewed+' new Messages and ' + data.unRead + ' Unread messages',
-            sound: 'file://sound.mp3'
-          });
-        }
-        // if (data.status == 'success'){
-        //   alert('Welcome MR/MISS '+data.datlanca.name)
-        // }else {
-        //   alert('Check your id and pass and try again')
-        // }
-      },error=> {
-        console.log(error);
-      });
+    if(this.globalVar.loginStatus){
+      this.data = this.httpClient.get(this.globalVar.apiUrl + '/user/msg-check/'  + this.globalVar.loginData.data.id);
+      this.data
+        .subscribe(data => {
+          console.log(data);
+          if (data.unViewed > 0){
+            this.lclNot.schedule({
+              id: 1,
+              text: 'You have '+data.unViewed+' new Messages and ' + data.unRead + ' Unread messages',
+              sound: 'file://sound.mp3'
+            });
+          }
+        },error=> {
+          console.log(error);
+        });
+    }
   }
   checkLogin(){
     console.log('hello');
@@ -73,10 +70,10 @@ export class WelcomePage {
     events.subscribe('user:created', () => {
       this.getMsg();
     });
-    // setInterval(function() {
-    //   console.log('function called');
-    //   events.publish('user:created');
-    // }, 10000);
+    setInterval(function() {
+      console.log('function called');
+      events.publish('user:created');
+    }, 10000);
     navCtrl.setRoot(HomePage);
   }
   ionViewDidLoad() {

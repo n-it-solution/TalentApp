@@ -28,6 +28,7 @@ export class JoinPage {
   talentId: string;
   subTalentList: any = [];
   userData:any;
+  imgSelected:boolean = false;
   joinData: any =  {name: "", height: "" , gender: "", countryOrigin: "", countryLiveIn: "", email: "", yearsExperience: "",
                       phone1: "", age: 0, talent: 0
                     };
@@ -135,11 +136,13 @@ export class JoinPage {
   selectPic(){
     const options = {outputType:1};
     this.imagePicker.getPictures(options).then((results) => {
+      this.images = [];
       for (var i = 0; i < results.length; i++) {
         // alert(results[i]);
         var imageUri = 'data:image/jpeg;base64,' + results[i];
         // this.uploadImage(imageUri);
         this.images.push( {imageUri: imageUri, status: false} );
+        this.imgSelected = true;
         // this.data1.doc = 'data:image/jpeg;base64,' + results[i];
         // console.log('Image URI: ' + results[i]);
       }
