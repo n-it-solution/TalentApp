@@ -36,7 +36,8 @@
                   <ion-list>
                     <ion-item>
                       <ion-label class="myinputslb" stacked>Upload Picture</ion-label>
-                      <ion-input type="text" readonly (click)="selectPic()" placeholder="Choose Picture" class="myinputs"></ion-input>
+                      <ion-input type="text" readonly (click)="selectPic()" *ngIf="!imgSelected" placeholder="Choose Picture" class="myinputs"></ion-input>
+                      <ion-input type="text" readonly (click)="selectPic()" *ngIf="imgSelected" placeholder="You selected {{ images.length }} files" class="myinputs"></ion-input>
                     </ion-item>
                     <ion-item>
                       <ion-label class="myinputslb" stacked>Name</ion-label>

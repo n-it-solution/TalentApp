@@ -15,8 +15,8 @@ export class GlobalVariableProvider {
   loginData:any;
   constructor(public http: HttpClient) {
     console.log('Hello GlobalVariableProvider Provider');
-    // this.domain = 'https://www.worldctalenthubb.com';
-    this.domain = 'http://192.168.1.6';
+    this.domain = 'https://www.worldctalenthubb.com';
+    // this.domain = 'http://192.168.0.115';
     this.apiUrl = this.domain + '/api';
   }
 }

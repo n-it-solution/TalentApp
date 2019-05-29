@@ -23,9 +23,10 @@ export class CustomerPage {
     if (this.cs.inquiry == false && this.cs.transaction == false && this.cs.booking == false && this.cs.tech == false){
       alert('One must be select')
     }else {
+      console.log(this.globalVar.loginData);
       console.log(this.cs);
       let data1 = JSON.stringify(this.cs);
-      this.data = this.httpClient.post(this.globalVar.apiUrl + '/cs/submit',{cs : this.cs});
+      this.data = this.httpClient.post(this.globalVar.apiUrl + '/cs/submit',{cs : this.cs, id: this.globalVar.loginData.data.id});
       this.data
         .subscribe(data => {
           console.log(data);
