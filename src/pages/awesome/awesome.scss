@@ -94,6 +94,9 @@ page-awesome {
     margin: 0px;
     padding: 15px 0px;
   }
+  .awesome-btn a{
+    text-decoration: none;
+  }
   .btn-awe{
     background-color: #fec733!important;
     border-width: 1px;
@@ -101,6 +104,18 @@ page-awesome {
     border-color: #f7fe33;
     color: #000000;
     font-weight: bold;
+  }
+
+  .item.item-ios .checkbox-ios {
+    position: static;
+    display: block;
+    margin: 8px 0 8px 2px !important;
+  }
+
+  .item.item-md .checkbox-md {
+    position: static;
+    display: block;
+    margin: 8px 0 8px 2px !important;
   }
 
 }
