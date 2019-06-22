@@ -30,7 +30,7 @@ export class CustomerPage {
       this.data
         .subscribe(data => {
           console.log(data);
-          alert('Your request has been submit')
+          alert('Representative is ready to help with your concern.Please Whatapp:+233 55 834 6040')
         },error=> {
           console.log(error);
           alert('Something wrong!')

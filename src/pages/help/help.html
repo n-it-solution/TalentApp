@@ -56,7 +56,7 @@
                       <ion-img class="img-ion1" src="../../assets/content/img/right-arrow.png" item-end></ion-img>
                       <!--<ion-icon name="rose" item-end></ion-icon>-->
                     </ion-item>
-                    <ion-item id="myclass4" (click)="openCustomerService()">
+                    <ion-item id="myclass4" (click)="openCustomerService()" *ngIf="globalVar.loginStatus">
                       <ion-img class="img-ion" src="../../assets/content/img/service.png" item-start></ion-img>
                       <!--<ion-icon name="leaf" item-start></ion-icon>-->
                       <span style="color: #fff;">Customer Service</span>
