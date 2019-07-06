@@ -3,14 +3,13 @@ import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import {JoinPage} from "../join/join";
 import {LocalNotifications} from "@ionic-native/local-notifications";
 import {HttpClient} from "@angular/common/http";
-import { BackgroundMode } from '@ionic-native/background-mode';
 import {GlobalVariableProvider} from "../../providers/global-variable/global-variable";
 import {SearchPage} from "../search/search";
 import {GalleryPage} from "../gallery/gallery";
 import {HomePage} from "../home/home";
 import {LoginPage} from "../login/login";
 import {Storage} from "@ionic/storage";
-
+import { Badge } from '@ionic-native/badge/ngx';
 import { HttpHeaders } from '@angular/common/http';
 /**
  * Generated class for the WelcomePage page.
@@ -39,7 +38,11 @@ export class WelcomePage {
       this.data
         .subscribe(data => {
           console.log(data);
+          if(data.unRead > 0) {
+            this.badge.set(data.unViewed);
+          }
           if (data.unViewed > 0){
+            this.badge.set(data.unViewed);
             console.log('msg notification showed');
             this.lclNot.schedule({
               id: 1,
@@ -86,16 +89,10 @@ export class WelcomePage {
   }
   startVideo: boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams, private lclNot: LocalNotifications,public httpClient: HttpClient,
-              private backgroundMode: BackgroundMode, public globalVar: GlobalVariableProvider,public events: Events,private storage: Storage,
-
+              public globalVar: GlobalVariableProvider,public events: Events,private storage: Storage,
+              private badge: Badge
   ) {
     this.checkLogin();
-    if(!backgroundMode.isEnabled()){
-      backgroundMode.setDefaults({
-        silent: true,
-      });
-      this.backgroundMode.enable();
-    }
     console.log(1);
     this.getMsg();
     events.subscribe('user:created', () => {

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { Badge } from '@ionic-native/badge/ngx';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -34,9 +34,6 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import { File } from '@ionic-native/file';
 import {WelcomePage} from "../pages/welcome/welcome";
 import { LocalNotifications } from '@ionic-native/local-notifications';
-import { BackgroundMode } from '@ionic-native/background-mode';
-
-
 @NgModule({
   declarations: [
     MyApp,
@@ -99,7 +96,7 @@ import { BackgroundMode } from '@ionic-native/background-mode';
     FileTransfer,
     File,
     LocalNotifications,
-    BackgroundMode
+    Badge
   ]
 })
 export class AppModule {}
