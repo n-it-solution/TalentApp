@@ -7,7 +7,6 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {AwesomePage} from "../pages/awesome/awesome";
 import {ContactPage} from "../pages/contact/contact";
-
 import { IonicStorageModule } from '@ionic/storage';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -34,6 +33,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import { File } from '@ionic-native/file';
 import {WelcomePage} from "../pages/welcome/welcome";
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import {MyAccountPage} from "../pages/my-account/my-account";
 @NgModule({
   declarations: [
     MyApp,
@@ -55,7 +55,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     UpdateProfilePage,
     NotificationPage,
     GalleryPage,
-    WelcomePage
+    WelcomePage,
+    MyAccountPage
   ],
   imports: [
     BrowserModule,
@@ -84,7 +85,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     UpdateProfilePage,
     NotificationPage,
     GalleryPage,
-    WelcomePage
+    WelcomePage,
+    MyAccountPage
   ],
   providers: [
     StatusBar,

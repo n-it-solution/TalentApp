@@ -1,0 +1,110 @@
+<!--
+  Generated template for the MyAccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle right>
+      <ion-icon name="menu" color="light"></ion-icon>
+    </button>
+<!--    <ion-title>MyAccount</ion-title>-->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid *ngIf="detailShow">
+    <ion-row no-padding no-margin>
+      <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+        <div style="">
+          <div class="main">
+            <div class="myform">
+              <div class="inner-text">
+                <ion-col col-md-12 id="full-clmn">
+                  <ion-list>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Name</ion-label>
+                      <ion-input clearInput readonly value="{{ details.name }}" type="text"  class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Talents</ion-label>
+                      <ion-input clearInput readonly value="{{ details.talent.name }}" type="text"  class="myinputs"></ion-input>
+<!--                      <ion-select  multiple="false" interface="popover" [(ngModel)]="talentId" (ionChange)="talentChange()">-->
+<!--                        <ion-option value="{{ i.id }}" *ngFor="let i of talentList">{{ i.name }}</ion-option>-->
+<!--                      </ion-select>-->
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Sub Talent</ion-label>
+                      <ion-input clearInput readonly value="{{ details.talent.talent.name }}" type="text"  class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Age</ion-label>
+                      <ion-input *ngIf="details.age == 1" clearInput readonly value="Your age group is 0 to 15" type="text"  class="myinputs"></ion-input>
+                      <ion-input *ngIf="details.age == 2" clearInput readonly value="Your age group is 15 to 30" type="text"  class="myinputs"></ion-input>
+                      <ion-input *ngIf="details.age == 3" clearInput readonly value="Your age group is 30 to 45" type="text"  class="myinputs"></ion-input>
+                      <ion-input *ngIf="details.age == 4" clearInput readonly value="Your age group is 45 to 60" type="text"  class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Your Height</ion-label>
+                      <ion-input type="text" readonly value="{{ details.height }}" [(ngModel)]="details.height" placeholder="example: 6" class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Your Gender</ion-label>
+                      <ion-select  multiple="false" aria-readonly="true" interface="popover">
+                        <ion-option value="Male" *ngIf="details.gender == 1" selected>Male</ion-option>
+                        <ion-option value="Male" *ngIf="details.gender != 1">Male</ion-option>
+                        <ion-option value="Female" *ngIf="details.gender == 2" selected>Female</ion-option>
+                        <ion-option value="Female" *ngIf="details.gender != 2">Female</ion-option>
+                        <ion-option value="Other" *ngIf="details.gender == 3" selected>Other</ion-option>
+                        <ion-option value="Other" *ngIf="details.gender != 3s">Other</ion-option>
+                      </ion-select>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Continent Of Origin</ion-label>
+                      <ion-input type="text" readonly value="{{ details.origin }}" placeholder="example: 6" class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Country You Live in Now</ion-label>
+                      <ion-input type="text" readonly value="{{ details.live }}"  placeholder="example: USA" class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Your Number</ion-label>
+                      <ion-input type="text" readonly value="{{ details.phone }}" placeholder="example: +15417543010" class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Your Mail</ion-label>
+                      <ion-input type="text" readonly value="{{ details.mail }}" placeholder="example example@mail.com" class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Years Of Work Experience</ion-label>
+                      <ion-input readonly value="{{ details.exp }}" type="text" placeholder="example: 2" class="myinputs"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label class="myinputslb" stacked>Extra Experience / Other Portfolio link</ion-label>
+                      <ion-input type="text" readonly value="{{ details.port }}" placeholder="Extra Experience / Other Portfolio link" class="myinputs"></ion-input>
+                    </ion-item>
+                    <!--<ion-item>-->
+                    <!--<ion-label class="myinputslb" stacked>Select Images</ion-label>-->
+                    <!--<button class="btn-awe" ion-button block outline (click)="selectPic()">Browse Files</button>-->
+                    <!--</ion-item>-->
+                    <!--<ion-item>-->
+                    <!--<ion-label class="myinputslb" stacked>Select Video</ion-label>-->
+                    <!--<button class="btn-awe" ion-button block outline (click)="testVideo()">Browse Video</button>-->
+                    <!--</ion-item>-->
+                  </ion-list>
+                </ion-col>
+              </div>
+            </div>
+            <!--<div class="select-img">
+              <button class="btn-awe" ion-button block outline  (click)="selectPic()">Browse Images</button>
+            </div>-->
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

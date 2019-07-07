@@ -39,10 +39,10 @@ export class WelcomePage {
         .subscribe(data => {
           console.log(data);
           if(data.unRead > 0) {
-            this.badge.set(data.unViewed);
+            // this.badge.set(data.unViewed);
           }
           if (data.unViewed > 0){
-            this.badge.set(data.unViewed);
+            // this.badge.set(data.unViewed);
             console.log('msg notification showed');
             this.lclNot.schedule({
               id: 1,
