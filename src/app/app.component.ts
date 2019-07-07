@@ -36,7 +36,7 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
   loginMenu: Array<{title: string, component: any}> = [
     { title: 'Home', component: HomePage },
-    {title: 'My Account', component: MyAccountPage},
+    {title: 'Profile', component: MyAccountPage},
     { title: 'Notifications', component: NotificationPage },
     { title: 'How Can We Help You', component: HelpPage },
     { title: 'Gallery', component: GalleryPage },
