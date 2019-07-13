@@ -9,7 +9,7 @@ import {GalleryPage} from "../gallery/gallery";
 import {HomePage} from "../home/home";
 import {LoginPage} from "../login/login";
 import {Storage} from "@ionic/storage";
-import { Badge } from '@ionic-native/badge/ngx';
+import { Badge } from '@ionic-native/badge';
 import { HttpHeaders } from '@angular/common/http';
 /**
  * Generated class for the WelcomePage page.
@@ -38,8 +38,14 @@ export class WelcomePage {
       this.data
         .subscribe(data => {
           console.log(data);
+          console.log(data.unRead);
           if(data.unRead > 0) {
-            this.badge.set(data.unViewed);
+            try {
+              this.badge.set(10);
+            } catch (e) {
+              console.error(e);
+            }
+            // this.badge.set(10);
           }
           if (data.unViewed > 0){
             this.badge.set(data.unViewed);
@@ -104,7 +110,7 @@ export class WelcomePage {
     }, 10000);
     setTimeout(() => {
       navCtrl.setRoot(HomePage);
-    }, 4000);
+    }, 1);
     setTimeout(() => {
       this.startVideo = true;
       // navCtrl.setRoot(HomePage);
