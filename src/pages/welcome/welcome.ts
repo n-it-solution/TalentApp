@@ -40,12 +40,7 @@ export class WelcomePage {
           console.log(data);
           console.log(data.unRead);
           if(data.unRead > 0) {
-            try {
-              this.badge.set(10);
-            } catch (e) {
-              console.error(e);
-            }
-            // this.badge.set(10);
+            this.badge.set(data.unRead);
           }
           if (data.unViewed > 0){
             this.badge.set(data.unViewed);
@@ -110,7 +105,7 @@ export class WelcomePage {
     }, 10000);
     setTimeout(() => {
       navCtrl.setRoot(HomePage);
-    }, 1);
+    }, 3000);
     setTimeout(() => {
       this.startVideo = true;
       // navCtrl.setRoot(HomePage);
