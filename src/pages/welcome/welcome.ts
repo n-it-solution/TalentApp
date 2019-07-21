@@ -47,7 +47,8 @@ export class WelcomePage {
             console.log('msg notification showed');
             this.lclNot.schedule({
               id: 1,
-              text: 'You have '+data.unViewed+' new Messages and ' + data.unRead + ' Unread messages',
+              // text: 'You have '+data.unViewed+' new Messages and ' + data.unRead + ' Unread messages',
+              text: 'You have new notification',
               sound: 'file://sound.mp3'
             });
           }

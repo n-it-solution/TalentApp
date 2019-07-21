@@ -26,7 +26,7 @@ export class NotificationPage {
   }
   showConfirm(id) {
     const confirm = this.alertCtrl.create({
-      title: 'Are you sure to delete this message?',
+      title: 'Are you sure?',
       // message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
       buttons: [
         {
